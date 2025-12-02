@@ -50,3 +50,27 @@ Instructions:
 - If you're not sure, say so
 
 Answer:"""
+
+
+MEMORY_SUMMARY_PROMPT = """You are a conversation memory module.
+
+Conversation so far:
+{history}
+
+Current question: {question}
+
+Summarize the key facts or answers that are relevant to the current question.
+Keep it to 3 bullet points or fewer."""
+
+
+CONVERSATION_ANSWER_PROMPT = """You are a helpful assistant continuing a conversation.
+
+Conversation so far:
+{history}
+
+Relevant context:
+{context}
+
+User question: {question}
+
+Answer concisely (3-5 sentences) using the relevant context when available."""
